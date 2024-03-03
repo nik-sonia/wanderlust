@@ -1,85 +1,55 @@
 <% layout("/layouts/boilerplate") %> 
 
 <style>
-  #filters{
-    display: flex;
-    /* flex-wrap: wrap; */
-    align-items: center;
-  }
-
-  .filter{
-   text-align: center;
-    margin-right: 2.5rem;
-    margin-top: 2rem;
-    opacity: 0.7;
-  }
-  .filter:hover{
-    opacity: 2;
-    cursor: pointer;
-  }
-
-  .filter p{
-    font-size: 0.8rem;
-  }
-
-  .taxtoggle{
-    border: 1px solid black;
-    height: 3.5rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-  }
-
-  .taxinfo{
-    display: none;
-  }
+ .filteroptions{
+  display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: space-between;
+ }
+ .btn2{
+  background-color:#fe424d;
+    color: white;
+    border-radius: 1.5rem;
+    padding: 0 1rem 0 1rem;
+    border: none;
+     }
 </style>
- 
- <div id="filters">
-    <div class="filter">
-      <div><i class="fa-solid fa-fire"></i></div>
-      <p>Trending</p>
-    </div>
-
-    <div class="filter">
-      <div><i class="fa-solid fa-bed"></i></div>
-      <p>Rooms</p>
-    </div>
-
-    <div class="filter">
-      <div><i class="fa-solid fa-mountain-city"></i></div>
-      <p>Iconic cities</p>
-    </div>
-
-    <div class="filter">
-      <div><i class="fa-solid fa-mountain"></i></div>
-      <p>Mountains</p>
-    </div>
-
-    <div class="filter">
-      <div><i class="fa-brands fa-fort-awesome"></i></div>
-      <p>Castles</p>
-    </div>
-
-    <div class="filter">
-      <div><i class="fa-solid fa-person-swimming"></i></div>
-      <p>Amazing Pools</p>
-    </div>
-
-    <div class="filter">
-      <div><i class="fa-solid fa-tents"></i></div>
-      <p>Camping</p>
-    </div>
-
-    <div class="filter">
-      <div><i class="fa-solid fa-tractor"></i></div>
-      <p>Farms</p>
-    </div>
-
-    <div class="filter">
-      <div><i class="fa-solid fa-snowflake"></i></div>
-      <p>Arctic</p>
+ <div class="button ">
+  <button class="btn2 col-md-13 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    All shortcuts
+  </button>
+ <div class="collapse" id="collapseExample" >
+    <div class="filter card card-body filteroptions">
+        <div><i class="fa-solid fa-fire"></i>
+        <p>Trending</p>
+        </div>
+        <div><i class="fa-solid fa-bed"></i>
+        <p>Rooms</p>
+       </div>
+        <div><i class="fa-solid fa-mountain-city"></i>
+        <p>Iconic cities</p>
+        </div>  
+        <div><i class="fa-solid fa-mountain"></i>
+        <p>Mountains</p>
+        </div>
+        <div><i class="fa-brands fa-fort-awesome"></i>
+        <p>Castles</p>
+        </div>
+        <div><i class="fa-solid fa-person-swimming"></i>
+        <p>Amazing Pools</p>
+        </div>
+        <div><i class="fa-solid fa-tents"></i>
+        <p>Camping</p>
+        </div>  
+        <div><i class="fa-solid fa-tractor"></i>
+        <p>Farms</p>
+         </div>
+        <div><i class="fa-solid fa-snowflake"></i>
+        <p>Arctic</p>
+        </div>
+      
     </div>
 
     <div class="taxtoggle">
@@ -89,6 +59,8 @@
       </div>
     </div>
  </div>
+</div>
+ 
 
   <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-3">
     <% for( let list of alllistings){   %>
